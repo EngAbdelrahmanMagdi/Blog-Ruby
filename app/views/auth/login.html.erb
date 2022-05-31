@@ -1,0 +1,11 @@
+
+  <h2>Login Form</h2> <br>
+   
+<%= form_with url: loginform_path,method: :post do |form|%>
+  <%= form.label :email, "Enter your Email", class:'m-2' %> 
+  <%= form.email_field :email , class:'form-control' %>
+  
+    <%= form.label :password, "Enter your Password" ,class:'m-2' %>
+  <%= form.password_field :password , class:'form-control' %> <br>
+  <button type="submit" class="btn btn-primary"> Submit </button>
+<% end %>

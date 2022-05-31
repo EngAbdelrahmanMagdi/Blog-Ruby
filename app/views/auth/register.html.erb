@@ -1,0 +1,22 @@
+<h1>Registeration Form </h1> <br>
+  
+   
+<%= form_with url: registerform_path,method: :post do |form|%>
+  <%= form.label :name, "Enter your Name", class:'m-2'%>
+  <%= form.text_field :name , class:'form-control' %>
+
+  <%= form.label :email, "Enter your Email", class:'m-2' %> 
+  <%= form.email_field :email , class:'form-control' %>
+  
+    <%= form.label :password, "Enter your Password" ,class:'m-2' %>
+  <%= form.password_field :password , class:'form-control' %>
+    <%= form.label :birthdate, "Enter your birthdate", class:'m-2' %>
+  <%= form.date_field :birthdate, class:'form-control' %>
+  <%= form.label :gender, "Enter your Gender", class:'m-2' %><br>
+   <%= form.radio_button :gender, 'email', :checked => true %> 
+  <%= label :gender_male, 'Male' %>
+  <%= form.radio_button :gender, 'male' %>
+  <%= label :gender_female, 'Female' %>
+  <button type="submit" class="btn btn-primary"> Submit </button>
+<% end %>
+
